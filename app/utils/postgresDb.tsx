@@ -1,13 +1,19 @@
-const { Pool } = require("pg");
-require("dotenv").config();
+import postgres from "postgres";
 
-const connectionPool = new Pool({
+const sql = postgres({});
+
+export default sql;
+
+//Using pg api library
+//const { Pool } = require("pg");
+//require("dotenv").config();
+/* const connectionPool = new Pool({
   connectionString: process.env.POSTGRES_URL,
   user: process.env.POSTGRES_USER,
   host: process.env.POSTGRES_HOST,
   database: process.env.POSTGRES_DATABASE,
   password: process.env.POSTGRES_PASSWORD,
   port: 5432,
-});
+}); */
 
-module.exports = connectionPool;
+//module.exports = connectionPool;
